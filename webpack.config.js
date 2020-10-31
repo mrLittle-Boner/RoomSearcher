@@ -1,15 +1,19 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackplugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: "production",
-  devtool: "cheap-module-source-map",
-  entry: {
-    index: "./src/index.js"
-  },
+  mode: "development",
+  // devtool: "cheap-module-source-map",
+  context: path.join(__dirname, 'src'),
+  entry: "./index.js",
   output: {
-    path: path.resolve(__dirname , "dist"),
-    filename: `[name].bundle.js`
+    path: path.join(__dirname , "dist"),
+    // publicPath: path.resolve(__dirname , "dist"),
+    publicPath: "",
+    filename: "[name].bundle.js"
   },
   module: {
     rules: [
@@ -35,21 +39,30 @@ module.exports = {
       },
       {
         test: /\.pug$/,
+        use: ['pug-loader']
+
+      },
+      {
+        test: /\.scss$/,
         use: [
-          'pug-loader'
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
         ],
       },
     ],
   },
   plugins: [
-    // new SomeWebpackplugin({
-    //   options:{
-
-    //   }
-    // }),
     new HtmlWebpackPlugin({
-      name: '[name].html',
-      template: './src/index.pug'
-    })
+      name: 'index.html',
+      template: './index.pug'
+    }),
+    new MiniCssExtractPlugin(),
+    new CopyWebpackplugin({
+      patterns: [
+        { from: './assets/images/', to: '../dist/images/' },
+      ],
+    }),
+    new CleanWebpackPlugin(),
   ],
 };
