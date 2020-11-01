@@ -38,6 +38,10 @@ module.exports = {
         loader: 'file-loader',
       },
       {
+        test: /\.(woff(2)?|ttf|eot|svg|otf)$/i,
+        loader: 'file-loader',
+      },
+      {
         test: /\.pug$/,
         use: ['pug-loader']
 
@@ -61,6 +65,7 @@ module.exports = {
     new CopyWebpackplugin({
       patterns: [
         { from: './assets/images/', to: '../dist/images/' },
+        { from: './assets/fonts/', to: '../dist/fonts/' },
       ],
     }),
     new CleanWebpackPlugin(),

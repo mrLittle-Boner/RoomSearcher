@@ -2,4 +2,25 @@ header.main-header
   .container
     .main-header__wrapper
       include ../logo/logo.pug
+      nav.main-nav
+        ul.main-nav__list.txt-body
+          li.main-nav__item
+            a(href="").main-nav__link О нас
+          li.main-nav__item
+            a(href="").main-nav__link Услуги
+            i(class="material-icons") expand_more
+          li.main-nav__item
+            a(href="").main-nav__link Вакансии
+          li.main-nav__item
+            a(href="").main-nav__link Новости
+          li.main-nav__item
+            a(href="").main-nav__link Соглашения
+            i(class="material-icons") expand_more
+      .log-in
+        a(href="").btn.btn--border.txt-h3
+          span.btn__inner Войти
+        //- div.btn.btn--border Войти
+        a(href="").btn.btn--fill.txt-h3.log-in__reg
+          span.btn__inner Зарегистрироваться
 
+             

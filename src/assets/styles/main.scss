@@ -1,11 +1,4 @@
+@import "./fonts.scss";
+@import "./variables.scss";
 @import "../../components/logo/logo.scss";
-
-body {
-  // background-color: aqua;
-}
-
-.pop {
-  // background-image: url('../../assets/images/rooms-2.png');
-  width: 200px;
-  height: 200px;
-}
+@import "../../components/header/header.scss";

@@ -1,14 +1,16 @@
 .logo {
   display: flex;
   align-items: center;
-
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   &__img {
-    margin-right: 12.5px;
+    margin-right: 7px;
   }
   &__name {
     text-transform: uppercase;
     font-size: 20px;
     color: #a3a0fc;
+    padding-bottom: 6px;
 
     span {
       color: #6cd0b6;;

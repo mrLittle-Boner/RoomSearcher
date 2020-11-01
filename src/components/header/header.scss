@@ -1,0 +1,29 @@
+.main-header__wrapper {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.main-nav {
+  margin-left: auto;
+  margin-right: 1.7%;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  &__link {
+    // display: flex;
+  }
+}
+
+.log-in {
+  &__reg {
+    margin-left: 20px;
+  }
+}
