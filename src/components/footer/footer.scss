@@ -1,0 +1,59 @@
+
+.footer {
+  &__top {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 0;
+
+    i {
+      font-size: 24px;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-left: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 260px;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 21px;
+  }
+
+}
+
+.footer__subscrib-text {
+  margin-bottom: 20px;
+}
+
+.footer__subscrib-input {
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  input {
+    @extend .input;
+    padding-right: 40px;
+  }
+}

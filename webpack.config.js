@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -54,19 +55,30 @@ module.exports = {
           'sass-loader'
         ],
       },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      name: 'index.html',
-      template: './index.pug'
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
-    new MiniCssExtractPlugin(),
     new CopyWebpackplugin({
       patterns: [
         { from: './assets/images/', to: '../dist/images/' },
-        { from: './assets/fonts/', to: '../dist/fonts/' },
+        // { from: './assets/fonts/', to: '../dist/fonts/' },
       ],
+    }),
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      name: 'index.html',
+      template: './index.pug'
     }),
     new CleanWebpackPlugin(),
   ],

@@ -4,6 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 ul {
   list-style-type: none;
 }
@@ -12,7 +16,7 @@ a {
   color: inherit;
 }
 .material-icons {
-  line-height: 0.1;
+  // line-height: 0.1;
 }
 
 // Variables //
@@ -75,6 +79,8 @@ $color-secondary:#6FCF97;
   &__inner{
     display: block;
     padding: 9px 20px 10px;
+    text-align: center;
+    flex-grow: 1;
   }
 
   &--fill{
@@ -100,3 +106,20 @@ $color-secondary:#6FCF97;
   }
 }
 
+// Main Input syle //
+.input {
+  padding: 12px 0 12px 15px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid $text-dark-25;
+  width: 100%;
+  color: $text-dark-75;
+  font-family: $font-mt;
+  font-size: 14px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $text-dark-50;
+  }
+}

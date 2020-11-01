@@ -10,4 +10,13 @@ html(lang="en")
     title RoomS || Find best Hotel and Rooms online || Online now for discount
   body
     include ./components/header/header.pug
-    .icon
+    main.bg-image-home
+      .container
+        section.home-main
+          .home-main__calendaer
+            include ./components/calendar/calendar.pug
+          .home-main__text.txt-body Лучшие номера для вашей работы, отдыха и просто вдохновения
+    include ./components/footer/footer.pug
+    sccript
+      script(src="https://kit.fontawesome.com/6049cc87c8.js", crossorigin="anonymous")
+    

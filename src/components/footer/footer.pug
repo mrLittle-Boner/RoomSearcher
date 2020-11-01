@@ -1,0 +1,35 @@
+mixin footerList(options)
+  ul.footer__list
+    .footer__title.txt-h3= options.title
+    each el in options.list
+      li.footer__list-item
+        a.footer__list-link= el
+
+footer.footer.txt-body
+  .container
+    .footer__top
+      .footer__item.footer__descr
+        .footer__logo
+          include ../logo/logo.pug
+        p.footer__logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации &#xab;Отельные взгляды&#xbb;
+      .footer__item.footer__nav
+        +footerList({title: "навигация",list:['О нас', 'Новости', 'Служба поддержки', 'Услуги']})
+      .footer__item.footer__about
+        +footerList({title: "О нас",list:['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']})
+      .footer__item.footer__help
+        +footerList({title: "Служба поддержки",list:['Соглашения', 'Сообщества', 'Связь с нами']})
+      .footer__item.footer__subscribe
+        .footer__title.txt-h3 Подписка
+        .footer__subscrib-text Получайте специальные предложения и новости сервиса
+        .footer__subscrib-input
+          input(type='email', placeholder='Email')
+          i(class='material-icons') arrow_forward
+
+    .footer__bottom
+      .footer__rights
+        Copyright &copy; 2047 Rooms отель. Все права - все права.
+      .footer__socials
+        div
+          i(class="fab fa-twitter")
+          i(class="fab fa-facebook-square")
+          i(class="fab fa-instagram")
