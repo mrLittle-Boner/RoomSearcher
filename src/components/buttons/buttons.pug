@@ -1,0 +1,9 @@
+mixin button(options)
+  - 
+    var btnClass = "btn btn--" + options.style
+    options.adClass ? btnClass += options.adClass : btnClass += ""
+  a(href= options.link class= btnClass)
+    span.btn__inner= options.text
+    if options.arrow 
+      i(class="material-icons") arrow_forward
+

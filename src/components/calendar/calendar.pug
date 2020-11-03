@@ -16,9 +16,11 @@
     .calendar__field 
       | Сколько гостей
       i(class='material-icons') expand_more
-  a(href='').calendar__btn.btn.btn--fill.txt-h3
-    span.btn__inner подобрать номер
-    i(class='material-icons') arrow_forward
+  include ../buttons/buttons.pug
+  +button({style:"fill", text:"Подобрать номер", link:"#",arrow: true})
+  //- a(href='').calendar__btn.btn.btn--fill.txt-h3
+  //-   span.btn__inner подобрать номер
+  //-   i(class='material-icons') arrow_forward
   //- p 
   //-   | Date:
   //-   input(type="text" id="datepicker" class='datepicker-here')

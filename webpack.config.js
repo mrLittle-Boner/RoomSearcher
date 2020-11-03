@@ -9,31 +9,19 @@ module.exports = {
   mode: "development",
   // devtool: "cheap-module-source-map",
   context: path.join(__dirname, 'src'),
+  optimization: {
+    minimize: false,
+    splitChunks: all
+  },
+
   entry: "./index.js",
   output: {
     path: path.join(__dirname , "dist"),
-    // publicPath: path.resolve(__dirname , "dist"),
     publicPath: "",
-    filename: "[name].bundle.js"
+    filename: "[name].js"
   },
   module: {
     rules: [
-      // {
-      //   test: /\\.jsx?$/,
-      //   loader: "loader",
-      //   options: {
-      //     option1: "option1"
-      //   },
-      //   use: [
-      //     "htmllint-loader",
-      //     {
-      //       loader: "html-loader",
-      //       options: {
-      //         // ...
-      //       }
-      //     }
-      //   ]
-      // },
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
@@ -44,7 +32,9 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: [
+          'pug-loader'
+        ]
 
       },
       {
@@ -65,21 +55,27 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackplugin({
+      patterns: [
+        { from: './assets/images/', to: '../dist/images/' },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './index.pug',
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search-room.html',
+      template: './pages/search-room.pug',
+      minify: false,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new CopyWebpackplugin({
-      patterns: [
-        { from: './assets/images/', to: '../dist/images/' },
-        // { from: './assets/fonts/', to: '../dist/fonts/' },
-      ],
-    }),
+
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      name: 'index.html',
-      template: './index.pug'
-    }),
     new CleanWebpackPlugin(),
   ],
 };

@@ -8,19 +8,18 @@ header.main-header
             a(href="").main-nav__link О нас
           li.main-nav__item
             a(href="").main-nav__link Услуги
-            i(class="material-icons") expand_more
+              i(class="material-icons") expand_more
           li.main-nav__item
             a(href="").main-nav__link Вакансии
           li.main-nav__item
             a(href="").main-nav__link Новости
           li.main-nav__item
             a(href="").main-nav__link Соглашения
-            i(class="material-icons") expand_more
+              i(class="material-icons") expand_more
       .log-in
-        a(href="").btn.btn--border.txt-h3
-          span.btn__inner Войти
-        //- div.btn.btn--border Войти
-        a(href="").btn.btn--fill.txt-h3.log-in__reg
-          span.btn__inner Зарегистрироваться
+        include ../buttons/buttons.pug
+        +button({style:"border",text:"Войти",link:"#"})
+        +button({style:"fill",text:"Зарегистрироваться",link:"#",adClass:" log-in__reg"})
+
 
              

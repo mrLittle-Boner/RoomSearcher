@@ -1,7 +1,15 @@
 @import "./fonts.scss";
 @import "./variables.scss";
+@import "../../components/buttons/buttons.scss";
+@import "../../components/inputs/inputs.scss";
 @import "../../components/logo/logo.scss";
 @import "../../components/header/header.scss";
 @import "../../components/footer/footer.scss";
 @import "../../components/calendar/calendar.scss";
-@import "./home-main.scss"
+@import "./home-main.scss";
+@import "./search-main.scss";
+
+.buttons, .inputs {
+  margin: 50px 0;
+}
+

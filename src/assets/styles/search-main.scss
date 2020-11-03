@@ -1,0 +1,53 @@
+.search-main__content {
+
+}
+
+.search-main__left{
+  max-width: 266px;
+}
+
+.filter{
+
+}
+
+.filter__dates {
+  margin-bottom: 20px;
+}
+
+.filter__range {
+  &-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-trigger {
+    height: 30px;
+    width: 100%;
+    background: teal;
+  }
+  &-price, &-text{
+    font-family: $font-mt;
+    color: $text-dark-50;
+    font-size: 12px;
+  }
+}
+
+.filter__rules {
+  &-title {
+    margin-bottom: 17px;
+  }
+}
+
+
+.filter__guests,
+.filter__range,
+.filter__rules,
+.filter__acces,
+.filter__comfort {
+  margin-bottom: 30px;
+}
+
+.filter__dates, .filter__guests {
+  .input-title {
+    margin-bottom: 6px;
+  }
+}

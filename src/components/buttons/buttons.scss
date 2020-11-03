@@ -1,0 +1,38 @@
+.btn {
+  @extend .txt-h3;
+
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: 2px solid transparent;
+
+  &__inner{
+    width: 100%;
+    padding: 9px 20px 10px;
+    text-align: center;
+  }
+
+  &--fill{
+    background: rgb(188,156,255);
+    background: $gradient-primary;
+    color: #fff;
+    background-origin: border-box;
+  }
+
+  &--border {
+    background: rgb(188,156,255);
+    background-image: $gradient-primary;
+    color: $color-main;
+    background-origin: border-box;
+
+    span {
+      background: #fff;
+    }
+  }
+  &--disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
