@@ -92,8 +92,9 @@ $color-secondary:#6FCF97;
 }
 .input-field {
   @extend .txt-body;
+
   display: flex;
-  
+  cursor: pointer;
   padding: 12px 0 12px 15px;
   border-radius: 4px;
   outline: none;
@@ -123,6 +124,19 @@ $color-secondary:#6FCF97;
     margin-bottom: 10px;
     cursor: pointer;
   }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend .txt-body;
+    font-weight: 700;
+    color: $text-dark-75;
+    margin-bottom: 5px;
+  }
+
 
   .custom-checkbox {
     width: 20px;
@@ -161,5 +175,27 @@ $color-secondary:#6FCF97;
   }
   input:checked ~ .custom-checkbox::before {
     display: block;
+  }
+}
+
+.dots {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  width: 40.45px;
+  z-index: 2;
+  justify-content: space-between;
+
+  span {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__active {
+    background: #fff;
   }
 }

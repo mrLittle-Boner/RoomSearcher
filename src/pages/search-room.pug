@@ -1,67 +1,82 @@
 extends ../layouts/main-layout.pug 
 
 block head
-      meta(name="description" , content="Find best hotel and room online with RoomS || Book now and get discount || We are the best web hotel searcher since 2008")
-      meta(name="keywords", content="Book Hotel Online, Booking , Hotels, Rooms, Online book with discount")
-      link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
-      title Ты пидор
-      
+  meta(name="description" , content="Find best hotel and room online with RoomS || Book now and get discount || We are the best web hotel searcher since 2008")
+  meta(name="keywords", content="Book Hotel Online, Booking , Hotels, Rooms, Online book with discount")
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
+  title Ты пидор
+  
 block body
-    include ../components/header/header.pug
-    main.search-main
-      .container
-        .search-main__content
-          .search-main__left.filter
-            .filter__dates
-              .input-title Даты пребывагния в отеле
-              .input-field 19 фаг - 23 авг
-                i(class="material-icons") expand_more
-            .filter__guests
-              .input-title гости
-              .input-field 3 гостя, 1 младенец
-                i(class="material-icons") expand_more
-            .filter__range
-              .filter__range-titles
-                .filter__range-name.txt-h3 Диапозон цены
-                .filter__range-price 5 000Р - 10 000Р
-              .filter__range-trigger
-              .filter__range-text  Стоимость за сутки пребывания в номере
-            .filter__rules
-              .filter__rules-title.txt-h3 Правила дома
-              .filter__rules-list  
-                .checkbox
-                  label 
-                    input(type="checkbox")
-                    span.custom-checkbox
-                    | Можно курить
-                .checkbox
-                  label
-                    input(type="checkbox") 
-                    span.custom-checkbox
-                    | Можно с питомцем
-                .checkbox
-                  label
-                    input(type="checkbox") 
-                    span.custom-checkbox
-                    | Можно пригласить гостей(до 10 человек)
-            .filter__acces
-              .accessibility__title.txt-h3 Доступность
-              .filter__acces-list
-                .checkbox
-                  label
-                    input(type="checkbox") 
-                    span.custom-checkbox
-                    | Широкий коридор
-                .checkbox
-                  label
-                    input(type="checkbox") 
-                    span.custom-checkbox
-                    | Помощник для инвалидов
-            .filter__comfort
-              .input-title Удобства номера
-              .input-field 2 спальни, 2 кровати
-                i(class="material-icons") expand_more
-            .more
-          .search-main__right.result
+  include ../components/header/header.pug
+  main.search-main
+    .container
+      include ../components/inputs/inputs.pug
+      .search-main__content
+        .search-main__left.filter
+          .filter__dates
+            .input-title Даты пребывагния в отеле
+            .input-field 19 фаг - 23 авг
+              i(class="material-icons") expand_more
+          .filter__guests
+            .input-title гости
+            .input-field 3 гостя, 1 младенец
+              i(class="material-icons") expand_more
+          .filter__range
+            .filter__range-titles
+              .filter__range-name.txt-h3 Диапозон цены
+              .filter__range-price 5 000Р - 10 000Р
+            .filter__range-trigger
+            .filter__range-text  Стоимость за сутки пребывания в номере
+          .filter__rules
+            .filter__rules-title.txt-h3 Правила дома
+            .filter__rules-list 
+              +checkBox({
+                descr: 'Можно курить'
+              })       
+              +checkBox({
+                descr: 'Можно с питомцем'
+              }) 
+              +checkBox({
+                descr: 'Можно пригласить гостей(до 10 человек)'
+              })                
+          .filter__acces
+            .filter__acces-title.txt-h3 Доступность
+            .filter__acces-list
+              +checkBox({
+                title: 'Широкий коридор',
+                descr: 'Ширина коридоров в номере не менее 91 см.'
+              }) 
+              +checkBox({
+                title: 'Помощник для инвалидов',
+                descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+              }) 
+          .filter__comfort
+            .input-title.filter__comfort-title Удобства номера
+            .input-field 2 спальни, 2 кровати
+              i(class="material-icons") expand_more
+          .filter__more
+            .input-title.filter__more-title дополнительные удобства
+              i(class="material-icons") expand_more
 
-    include ../components/footer/footer.pug
+            .filter__more-dropdown
+              +checkBox({descr: 'Завтрак'}) 
+              +checkBox({descr: 'Письменный стол'}) 
+              +checkBox({descr: 'Стул ждя кормления'}) 
+              +checkBox({descr: 'Кроватка'}) 
+              +checkBox({descr: 'Телевизор'}) 
+              +checkBox({descr: 'Шампунь'}) 
+        .search-main__right.results
+          .results__title Номера, которые мы для вас подобрали
+          include ../components/room/room.pug
+          .pagination
+            .pagination__btns
+              a(href="").pagination__btns-active 1
+              a(href="") 2
+              a(href="") 3
+              a(href="") ...
+              a(href="") 15
+              a(href="")  
+                i(class="material-icons") arrow_forward
+            .pagination__sub
+              | 1 - 12 из 100+ вариантов аренды
+  include ../components/footer/footer.pug

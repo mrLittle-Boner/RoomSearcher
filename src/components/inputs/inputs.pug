@@ -1,3 +1,13 @@
 mixin input(options)
   .input
     input(type="text", readonly, placeholder=options.text)
+
+mixin checkBox(options)
+  .checkbox
+    label
+      input(type="checkbox") 
+      span.custom-checkbox
+      .checkbox__text
+        if options.title
+          .checkbox__title= options.title
+        .checkbox__descr=options.descr

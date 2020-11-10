@@ -11,7 +11,9 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   optimization: {
     minimize: false,
-    splitChunks: all
+    splitChunks: {
+      chunks: 'all',
+    }
   },
 
   entry: "./index.js",

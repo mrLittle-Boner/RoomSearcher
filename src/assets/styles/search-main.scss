@@ -1,9 +1,10 @@
 .search-main__content {
-
+  display: flex;
 }
 
 .search-main__left{
   max-width: 266px;
+  margin-right: 5.2%;
 }
 
 .filter{
@@ -37,6 +38,27 @@
   }
 }
 
+.filter__acces {
+  &-title {
+    margin-bottom: 16px;
+  }
+}
+
+.filter__comfort {
+  &-title {
+    margin-bottom: 5px;
+  }
+}
+
+.filter__more {
+  &-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 18px;
+  }
+}
+
 
 .filter__guests,
 .filter__range,
@@ -49,5 +71,62 @@
 .filter__dates, .filter__guests {
   .input-title {
     margin-bottom: 6px;
+  }
+}
+
+.results {
+  flex-grow: 1;
+
+  &__title {
+    @extend .txt-h1;
+
+    margin-bottom: 20px;
+  }
+}
+
+.pagination {
+  text-align: center;
+
+  &__btns {
+    font-family: $font-mt;
+    font-weight: 400;
+    font-size: 12px;
+    color: $text-dark-50;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 11px;
+
+    a {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:last-of-type {
+        background: $color-secondary;
+        background: $gradient-secondary;
+      }
+    }
+
+    i {
+      margin-left: 0;
+      flex-basis: auto;
+      color: #fff;
+    }
+
+    &-active {
+      background: $color-main;
+      background: $gradient-primary;
+      color: #fff;
+    }
+  }
+  &__sub {
+    font-family: $font-mt;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-dark-75;
   }
 }
