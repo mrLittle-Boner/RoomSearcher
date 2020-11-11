@@ -72,6 +72,11 @@ module.exports = {
       template: './pages/search-room.pug',
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      filename: 'room-dets.html',
+      template: './pages/room-dets.pug',
+      minify: false,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

@@ -1,0 +1,65 @@
+extends ../layouts/main-layout.pug
+
+block head
+  meta(name="description" , content="Find best hotel and room online with RoomS || Book now and get discount || We are the best web hotel searcher since 2008")
+  meta(name="keywords", content="Book Hotel Online, Booking , Hotels, Rooms, Online book with discount")
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
+  title Room Details and rules
+
+block body
+  include ../components/header/header.pug
+  section.dets
+    .dets__photos
+      img(src="./images/room-det-1.jpg", alt="big room with bed")
+      img(src="./images/room-det-2.jpg", alt="nice other stuff")
+      img(src="./images/room-det-3.jpg", alt="one more nice stuff")
+    .container
+      .dets__wrapper
+        .dets__left
+          .dets__left-info
+            .room-dets
+              .dets__title Room Details
+              .room-dets__item
+                .room-dets__icon
+                  i(class="material-icons") insert_emoticon
+                .room-dets__content
+                  .room-dets__name Comfort
+                  .room-dets__descr Sound absorbing walls
+              hr.room-dets__line
+              .room-dets__item
+                .room-dets__icon
+                  i(class="material-icons") location_city
+                .room-dets__content
+                  .room-dets__name  Convenience
+                  .room-dets__descr Window in each of the bedrooms
+              hr.room-dets__line
+              .room-dets__item
+                .room-dets__icon
+                  i(class="material-icons") whatshot
+                .room-dets__content
+                  .room-dets__name Cosiness
+                  .room-dets__descr The room with a fireplace
+            .room-impressions
+              .dets__title Impressions of the room
+              .room-impressions__content
+                .room-impressions__circle
+                  canvas#myCanvas( width="140", height="140")
+                  .room-impressions__circle-inner
+                    .room-impressions__circle-count 260
+                    .room-impressions__circle-votes votes
+                ul.room-impressions__list
+                  li.room-impressions__item
+                    span.room-impressions__great
+                    | Великолепно
+                  li.room-impressions__item 
+                    span.room-impressions__good
+                    | Хорошо
+                  li.room-impressions__item 
+                    span.room-impressions__normal
+                    | Удовлетворительно
+                  li.room-impressions__item 
+                    span.room-impressions__bad
+                    | Разочарован
+        .dets__right.book        
+
+  include ../components/footer/footer.pug

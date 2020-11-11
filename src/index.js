@@ -3,8 +3,4 @@
 // import 'air-datepicker/dist/css/datepicker.css';
 // import './components/calendar/calendar.js';
 import './assets/styles/main.scss';
-
-
-
-
-console.log("Ti pidor");
+import './rpie.js';

@@ -1,11 +1,12 @@
 .results__rooms {
   display: grid;
+  margin-bottom: 41px;
   gap: 20px 13px;
   grid-template-columns: repeat(3,1fr);
 }
 
 .room {
- 
+  cursor: pointer;
   &__img {
     position: relative;
 
