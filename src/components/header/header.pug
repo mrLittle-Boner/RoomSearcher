@@ -5,21 +5,18 @@ header.main-header
       nav.main-nav
         ul.main-nav__list.txt-body
           li.main-nav__item
-            a(href="").main-nav__link О нас
+            a(href="").main-nav__link About Us
           li.main-nav__item
-            a(href="").main-nav__link Услуги
+            a(href="").main-nav__link Services
               i(class="material-icons") expand_more
           li.main-nav__item
-            a(href="").main-nav__link Вакансии
+            a(href="").main-nav__link Vacancy
           li.main-nav__item
-            a(href="").main-nav__link Новости
+            a(href="").main-nav__link News
           li.main-nav__item
-            a(href="").main-nav__link Соглашения
+            a(href="").main-nav__link Convention
               i(class="material-icons") expand_more
       .log-in
         include ../buttons/buttons.pug
-        +button({style:"border",text:"Войти",link:"#"})
-        +button({style:"fill",text:"Зарегистрироваться",link:"#",adClass:" log-in__reg"})
-
-
-             
+        +button({style:"border",text:"Log In",link:"#"})
+        +button({style:"fill",text:"Registration",link:"#",adClass:" log-in__reg"})

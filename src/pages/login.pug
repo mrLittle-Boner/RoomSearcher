@@ -1,0 +1,34 @@
+extends ../layouts/main-layout.pug
+
+block head
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
+  title Login to RoomS Account
+
+block body
+  include ../components/header/header.pug
+  
+  section.login
+    .login__wrapper
+      form.login__form
+        .login__title Log In
+        input(type="email", placeholder="Name", class="login__email")
+        input(type="password", placeholder="Password", class="login__pass")
+        include ../components/buttons/buttons.pug
+        +button({
+          link:"#",
+          style:"fill",
+          arrow:true,
+          adClass:" login__btn-enter",
+          text:"Log IN"
+        })
+        .login__register
+          div.login__register-text Haven`t account?
+          +button({
+            link:"#",
+            style:"border",
+            arrow:false,
+            adClass:" login__btn-register",
+            text:"Create"
+          })
+
+  include ../components/footer/footer.pug 

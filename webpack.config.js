@@ -82,6 +82,11 @@ module.exports = {
       template: './pages/registration.pug',
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: './pages/login.pug',
+      minify: false,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
