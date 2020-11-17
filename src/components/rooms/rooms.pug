@@ -1,0 +1,67 @@
+- 
+  var rooms = [
+    {
+      number: "888", src: "./images/rooms-1.jpg", alt:"Nice room for your rest", isLux:true, price: "9 900",reviews:"145"
+    },
+    {
+      number: "849", src: "./images/rooms-2.png", alt:"Nice room for your rest", isLux:false, price: "9 900",reviews:"65"
+    },
+    {
+      number: "980", src: "./images/rooms-3.jpg", alt:"Nice room for your rest", isLux:true, price: "8 500",reviews:"35"
+    },
+    {
+      number: "856", src: "./images/rooms-4.jpg", alt:"Nice room for your rest", isLux:false, price: "7 300",reviews:"18"
+    },
+    {
+      number: "740", src: "./images/rooms-5.jpg", alt:"Nice room for your rest", isLux:false, price: "6 000",reviews:"44"
+    },
+    {
+      number: "982", src: "./images/rooms-6.jpg", alt:"Nice room for your rest", isLux:false, price: "5 800",reviews:"56"
+    },
+    {
+      number: "672", src: "./images/rooms-7.jpg", alt:"Nice room for your rest", isLux:false, price: "5 500",reviews:"38"
+    },
+    {
+      number: "350", src: "./images/rooms-9.jpg", alt:"Nice room for your rest", isLux:false, price: "5 000",reviews:"74"
+    },
+    {
+      number: "450", src: "./images/rooms-8.jpg", alt:"Nice room for your rest", isLux:false, price: "5 3000",reviews:"39"
+    },
+    {
+      number: "666", src: "./images/rooms-10.jpg", alt:"Nice room for your rest", isLux:false, price: "5 000",reviews:"25"
+    },
+    {
+      number: "444", src: "./images/rooms-11.jpg", alt:"Nice room for your rest", isLux:false, price: "5 000",reviews:"15"
+    },
+    {
+      number: "352", src: "./images/rooms-12.jpg", alt:"Nice room for your rest", isLux:false, price: "5 000",reviews:"55"
+    },
+  ]
+.results__rooms
+  each room in rooms
+    a(href="room-dets.html")
+      .room
+        .room__img
+          img(src=room.src, alt=room.alt)
+          i(class="material-icons left-arrow") keyboard_arrow_left
+          i(class="material-icons right-arrow") keyboard_arrow_right
+          .dots
+            span.dots__active 
+            span 
+            span 
+            span 
+        .room__details
+          .room__details-top
+            div(class="room__number " + (room.isLux ? "room__number--lux" : ""))!= "&#x2116; " + room.number
+            .room__price!= room.price + "&#8381;"
+              span.room__per per day
+          hr.room__line
+          .room__details-bottom
+            .room__stars
+              i(class="material-icons") star
+              i(class="material-icons") star
+              i(class="material-icons") star
+              i(class="material-icons") star
+              i(class="material-icons") star
+            .room__review= room.reviews
+              span Reviews

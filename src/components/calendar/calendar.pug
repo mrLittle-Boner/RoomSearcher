@@ -1,26 +1,20 @@
 .calendar
-  .calendar__title.txt-h1 Найдём номера под ваши пожелания
+  .calendar__title.txt-h1 We will find rooms according to your wishes
   .calendar__dates
     .calendar__date
-      .calendar__subtitle.txt-h3 Прибытие
+      .calendar__subtitle.txt-h3 Arrival
       .calendar__field
-        | ДД.ММ.ГГГГ
+        | DD.MM.YYYY
         i(class='material-icons') expand_more
     .calendar__date
-      .calendar__subtitle.txt-h3 Выезд
+      .calendar__subtitle.txt-h3 Departure
       .calendar__field
-        | ДД.ММ.ГГГГ
+        | ДД.MM.YYYY
         i(class='material-icons') expand_more
   .calendar__guests
-    .calendar__subtitle.txt-h3 Гости
+    .calendar__subtitle.txt-h3 Guests
     .calendar__field 
-      | Сколько гостей
+      | How many guests 
       i(class='material-icons') expand_more
   include ../buttons/buttons.pug
-  +button({style:"fill", text:"Подобрать номер", link:"#",arrow: true})
-  //- a(href='').calendar__btn.btn.btn--fill.txt-h3
-  //-   span.btn__inner подобрать номер
-  //-   i(class='material-icons') arrow_forward
-  //- p 
-  //-   | Date:
-  //-   input(type="text" id="datepicker" class='datepicker-here')
+  +button({style:"fill", text:"pick up a room", link:"./search-room.html",arrow: true})

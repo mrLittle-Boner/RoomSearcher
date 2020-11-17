@@ -14,60 +14,60 @@ block body
       .search-main__content
         .search-main__left.filter
           .filter__dates
-            .input-title Даты пребывагния в отеле
-            .input-field 19 фаг - 23 авг
+            .input-title Dates of stay
+            .input-field 19 feb - 23 aug
               i(class="material-icons") expand_more
           .filter__guests
-            .input-title гости
-            .input-field 3 гостя, 1 младенец
+            .input-title Guests
+            .input-field 3 Guests, 1 baby
               i(class="material-icons") expand_more
           .filter__range
             .filter__range-titles
-              .filter__range-name.txt-h3 Диапозон цены
+              .filter__range-name.txt-h3 Range price
               .filter__range-price 5 000Р - 10 000Р
             .filter__range-trigger
-            .filter__range-text  Стоимость за сутки пребывания в номере
+            .filter__range-text Cost per day in the room
           .filter__rules
-            .filter__rules-title.txt-h3 Правила дома
+            .filter__rules-title.txt-h3 Hotel rules
             .filter__rules-list 
               +checkBox({
-                descr: 'Можно курить'
+                descr: 'Smoking allowed'
               })       
               +checkBox({
-                descr: 'Можно с питомцем'
+                descr: 'Pet allowed'
               }) 
               +checkBox({
-                descr: 'Можно пригласить гостей(до 10 человек)'
+                descr: 'Small party allowed(up to 10 people)'
               })                
           .filter__acces
             .filter__acces-title.txt-h3 Доступность
             .filter__acces-list
               +checkBox({
-                title: 'Широкий коридор',
-                descr: 'Ширина коридоров в номере не менее 91 см.'
+                title: 'Wide corridor',
+                descr: 'The width of the corridors in the room is at least 91 cm.'
               }) 
               +checkBox({
-                title: 'Помощник для инвалидов',
-                descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                title: 'Disabled assistant',
+                descr: 'A specialist will meet you on the 1st floor and walk you to your room.'
               }) 
           .filter__comfort
-            .input-title.filter__comfort-title Удобства номера
-            .input-field 2 спальни, 2 кровати
+            .input-title.filter__comfort-title Room facilities
+            .input-field 2 bedrooms, 2 beds
               i(class="material-icons") expand_more
           .filter__more
-            .input-title.filter__more-title дополнительные удобства
+            .input-title.filter__more-title Additional facilities
               i(class="material-icons") expand_more
 
             .filter__more-dropdown
-              +checkBox({descr: 'Завтрак'}) 
-              +checkBox({descr: 'Письменный стол'}) 
-              +checkBox({descr: 'Стул ждя кормления'}) 
-              +checkBox({descr: 'Кроватка'}) 
-              +checkBox({descr: 'Телевизор'}) 
-              +checkBox({descr: 'Шампунь'}) 
+              +checkBox({descr: 'Breakfast'}) 
+              +checkBox({descr: 'Writing desk'}) 
+              +checkBox({descr: 'Baby feeding chair'}) 
+              +checkBox({descr: 'Crib'}) 
+              +checkBox({descr: 'TV'}) 
+              +checkBox({descr: 'Shampoo'}) 
         .search-main__right.results
-          .results__title Номера, которые мы для вас подобрали
-          include ../components/room/room.pug
+          .results__title Rooms, which we found for you
+          include ../components/rooms/rooms.pug
           .pagination
             .pagination__btns
               a(href="").pagination__btns-active 1
@@ -78,5 +78,5 @@ block body
               a(href="")  
                 i(class="material-icons") arrow_forward
             .pagination__sub
-              | 1 - 12 из 100+ вариантов аренды
+              | 1 - 12 from 100+ rental options
   include ../components/footer/footer.pug
