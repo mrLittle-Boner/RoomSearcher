@@ -4,3 +4,4 @@
 // import './components/calendar/calendar.js';
 import './assets/styles/main.scss';
 import './rpie.js';
+import './pages/room-dets.js';

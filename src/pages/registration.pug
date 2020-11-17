@@ -1,0 +1,52 @@
+extends ../layouts/main-layout.pug
+
+block head
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons",rel="stylesheet")
+  title Register Now and get Discount
+
+block body
+  include ../components/header/header.pug
+  section.registr
+    form(action="").registr__form
+      .registr__title 
+        | Account Registration
+      .registr__name
+        label
+          input(type="text", placeholder="Name")
+      .registr__secname
+        label
+          input(type="text", placeholder="Surname")
+      .registr__sex
+        .my-radio
+          label.my-radio__label
+            input(type="radio", name="sex",class="my-radio__input")
+            span.my-radio__custom
+            span.my-radio__text Man
+        .my-radio
+          label.my-radio__label 
+            input(type="radio", name="sex",class="my-radio__input")
+            span.my-radio__custom
+            span.my-radio__text not a Man
+      .registr__birthdate
+        .registr__item-title Birth date
+        label 
+          input(type="text", placeholder="DD.ММ.YY")
+      .registr__loginfo
+        .registr__item-title LogIn Data
+        label
+          input(type="email" , placeholder="Email")
+        label
+          input(type="password",placeholder="Password")
+      .my-toggle
+        label.my-toggle__label
+          input.my-toggle__input(type="checkbox")
+          span.my-toggle__custom
+          span.my-toggle__text Receive special offers
+      .registr__specials
+      .registr__confirm
+        include ../components/buttons/buttons.pug
+        +button({link:"", text:"Confirm paymant",adClass:" registr__btn-pay" ,style:"fill",arrow: true,})
+      .registr__login
+        div.registr__login-text Already have a ROOMS account?
+        +button({text:"Login", style: "border", link:"",arrow: false, adClass:" registr__btn-login"})
+  include ../components/footer/footer.pug 

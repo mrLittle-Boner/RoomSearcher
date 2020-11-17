@@ -1,4 +1,8 @@
 .dets {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
   &__photos {
     display: grid;
     grid-template-columns: 2.2fr 1fr;
@@ -17,9 +21,13 @@
       }
     }
   }
+  &__left {
+    width: 62.45%;
+  }
 
   &__left-info {
     display: flex;
+    margin-bottom: 30px;
   }
 
   &__title {
@@ -67,7 +75,6 @@
   }
 
   &__line {
-    // width: 100%;
     border-color: rgba(31, 32, 65, 0.1);
     margin-top: 17px;
     margin-bottom: 17px;
@@ -131,5 +138,227 @@
   }
   &__bad {
     background-color: #919191;
+  }
+}
+
+.reviews {
+  .reviews__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-name {
+      @extend .txt-h2;
+    }
+
+    &-count {
+      @extend .txt-body;
+      margin-left: auto;
+    }
+  }
+}
+
+.review {
+  margin-bottom: 22px;
+  &__author {
+    display: flex;
+    align-items: center;
+    font-family: $font-mt;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: $text-dark-75;
+
+    &-avatar {
+      margin-right: 10px;
+    }
+
+    &-name {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__text {
+    @extend .txt-body;
+    line-height: 24px;
+  }
+
+  &__likes {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: $text-dark-25;
+    cursor: pointer;
+    border: 1px solid $text-dark-25;
+    border-radius: 10px;
+    font-size: 10px;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+
+    i {
+      font-size: 10px;
+      flex-basis: 0px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    &--liked {
+      border-color: $color-main;
+      color: $color-main;
+    }
+  }
+}
+
+.rules {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    @extend .txt-h2;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    max-width: 292px;
+
+    &-item {
+      @extend .txt-body;
+      display: flex;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -20px;
+        top: 4px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: $text-dark-25;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__cancel {
+    max-width: 341px;
+
+    &-text {
+      @extend .txt-body;
+      line-height: 24px;
+    }
+  }
+}
+
+.book {
+  padding: 40px 30px 30px 30px;
+  width: 380px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  height: max-content;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__number {
+    font-family: $font-qs;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    &::after {
+      content: "Lux";
+      color: $color-main;
+      font-size: 12px;
+      font-family: $font-mt;
+      font-weight: 700;
+      margin-left: 5px;
+    }
+
+    .symbol {
+      font-size: 14px;
+    }
+    .numbers {
+      font-size: 24px;
+    }
+  }
+  &__price {
+    font-family: $font-mt;
+    font-weight: 700;
+    font-size: 14px;
+    color: $text-dark-50;
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.book__dates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &-title {
+    @extend .txt-h3;
+    margin-bottom: 5px;
+  }
+  &-input {
+    @extend .input-field;
+    color: $text-dark-75;
+  }
+  &-arrival,
+  &-departure {
+    width: calc(50% - 20px);
+  }
+}
+
+.book__guest {
+  margin-bottom: 21px;
+
+  &-title {
+    @extend .txt-h3;
+    margin-bottom: 5px;
+  }
+  &-input {
+    @extend .input-field;
+    color: $text-dark-75;
+  }
+}
+
+.book__cost {
+  margin-bottom: 30px;
+
+  &-item {
+    @extend .txt-body;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.book__sum {
+  display: flex;
+  font-size: 19px;
+  color: $text-dark-100;
+  font-weight: 700;
+  font-family: $font-mt;
+  margin-bottom: 20px;
+
+  &-decorate {
+    flex-grow: 1;
+    border-bottom: 1px dashed grey;
+    position: relative;
+    bottom: 4px;
   }
 }

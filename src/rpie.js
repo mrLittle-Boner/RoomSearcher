@@ -9,4 +9,12 @@ var pieChart = {
   offset: 2
 };
 
-generatePieGraph('myCanvas', pieChart);
+(function () {
+  try {
+    generatePieGraph('myCanvas', pieChart);
+  }
+
+  catch (err) {
+    console.log("Rpie is not here, combat him later")
+  }
+})();

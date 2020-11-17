@@ -50,16 +50,112 @@ block body
                 ul.room-impressions__list
                   li.room-impressions__item
                     span.room-impressions__great
-                    | Великолепно
+                    | Great
                   li.room-impressions__item 
                     span.room-impressions__good
-                    | Хорошо
+                    | Good
                   li.room-impressions__item 
                     span.room-impressions__normal
-                    | Удовлетворительно
+                    | Satisfactorily
                   li.room-impressions__item 
                     span.room-impressions__bad
-                    | Разочарован
-        .dets__right.book        
+                    | Disappointed
+          .dets__review.reviews
+            .reviews__title
+              .reviews__title-name Guest reviews
+              .reviews__title-count 2 reviews
+            .reviews__container
+              .review
+                .review__author
+                  .review__author-avatar
+                    img(src="./images/author-1.jpg", alt="Author of review")
+                  .review__author-info
+                    .review__author-name Aslambek Abdulzagirov
+                    .review__author-time 5 days ago
+                .review__content
+                  .review__likes.review__likes--liked
+                    i(class="material-icons") favorite
+                    span.review__likes-count 12
+                  .review__text
+                    | Great mattress on the bed in the master bedroom!
+                    | And the ottoman is generally amazing. And the walls are really noise canceling.
+                    | Shouted compliments to the cook - no one from the neighbors complained.
+              .review
+                .review__author
+                  .review__author-avatar
+                    img(src="./images/author-2.jpg", alt="Author of review")
+                  .review__author-info
+                    .review__author-name Olga Kopyrightovna
+                    .review__author-time week ago
+                .review__content
+                  .review__likes.review__likes
+                    i(class="material-icons") favorite
+                    span.review__likes-count 2
+                  .review__text
+                    | Service is great! Everything is neat, clean. 
+                    | I advise you to order breakfasts in the room, every day a new dish and dessert as a compliment
+          .dets__rules.rules
+            .rules__list
+              .rules__title Rules
+              ul
+                li.rules__list-item
+                  | Pet not allowed
+                li.rules__list-item
+                  | No parties and events
+                li.rules__list-item
+                  | Arrival time - after 13:00, and check-out before 12:00
+            .rules__cancel
+              .rules__title Cancel
+              .rules__cancel-text
+                | Free cancellation within 48 hours.
+                | Thereafter, if canceled no later than 5 days before arrival.
+                | You will receive a full refund minus service fee. 
+        .dets__right.book
+          .book__title
+            .book__number
+              span.symbol &#x2116;
+              span.numbers 888
+            .book__price
+              | 9 900&#8381;
+              span  per day
+          .book__dates
+            .book__dates-arrival
+              .book__dates-title Arrival
+              .book__dates-input 
+                | 19.08.2019
+                i(class="material-icons") expand_more
+            .book__dates-departure
+              .book__dates-title Departure
+              .book__dates-input 
+                | 23.08.2019
+                i(class="material-icons") expand_more
+          .book__guest
+            .book__guest-title Guests
+            .book__guest-input
+              | 3 guests 
+              i(class="material-icons") expand_more
+          ul.book__cost
+            li.book__cost-item
+              span 9 9900P x 4days
+              span 39 960P
+            li.book__cost-item
+              span Service fee : discount 2147P
+              span 0P
+            li.book__cost-item
+              span Additional services
+              span 300P
+          .book__sum
+            span Summary
+            span.book__sum-decorate
+            span 100500P
+          include ../components/buttons/buttons.pug
+          +button({link:"#", text: "Book",style:"fill",adClass:" book__btn" ,arrow: true})
+            
+
+
+
+
+
+
 
   include ../components/footer/footer.pug

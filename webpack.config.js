@@ -18,7 +18,7 @@ module.exports = {
 
   entry: "./index.js",
   output: {
-    path: path.join(__dirname , "dist"),
+    path: path.join(__dirname, "dist"),
     publicPath: "",
     filename: "[name].js"
   },
@@ -75,6 +75,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'room-dets.html',
       template: './pages/room-dets.pug',
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'registration.html',
+      template: './pages/registration.pug',
       minify: false,
     }),
     new webpack.ProvidePlugin({
