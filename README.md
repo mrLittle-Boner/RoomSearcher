@@ -4,7 +4,8 @@
 
 ## This repository with source code for RoomS project
 Here u can find all code with done personally by me :see_no_evil:
-and [here]() u can see the result of my work, it`s nor finished yet, so be patient :smiley_cat:
+and [here](https://mrlittle-boner.github.io/RoomS/index.html) u can see the result of my work, it`s nor finished yet, so be patient :smiley_cat:
+Already done few pages : index -> then click Pick up a room -> then click on any room and finally u can click logIn or Register. On this step i realized a Webpack bundle with pug and scss. Next step gonna be add JavaScript(jQuery only for learning , i was learning only vanilla JS).
 
 ### What is RoomS :question:
 Actually, it`s Toxin in origin, but i decide give it a different name.
