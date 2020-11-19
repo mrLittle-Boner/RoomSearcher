@@ -41,13 +41,27 @@
     display: flex;
     align-items: center;
   }
-
 }
 
+@media screen and (max-width: 768px) {
+  .calendar {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 414px) {
+  .calendar {
+    padding: 15px;
+    margin: 0 auto;
+  }
+}
 
-
-//Customize datepiker//
-
-// .datepicker--day-name {
-//   color: $color-main;
-// }
+@media screen and (max-width: 350px) {
+  .calendar {
+    &__title {
+      font-size: 19px;
+    }
+    &__field {
+      padding: 9px 0 9px 7px;
+    }
+  }
+}

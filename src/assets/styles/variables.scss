@@ -8,7 +8,9 @@
 }
 body {
   max-width: 1920px;
+  min-width: 320px;
   margin: 0 auto;
+  position: relative;
 }
 ul {
   list-style-type: none;
@@ -291,6 +293,23 @@ $color-secondary: #6fcf97;
   }
   &__input:checked + &__custom::before {
     transform: translateX(20px);
+    background-color: $color-main;
+  }
+}
+
+.burger-nav {
+  display: none;
+  width: 40px;
+  height: 29px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
     background-color: $color-main;
   }
 }

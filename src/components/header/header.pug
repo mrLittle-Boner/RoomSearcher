@@ -2,6 +2,23 @@ header.main-header
   .container
     .main-header__wrapper
       include ../logo/logo.pug
+      .burger-nav
+        span.burger-nav__top
+        span.burger-nav__mid
+        span.burger-nav__bot
+      .mobile-nav
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link About Us
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Services
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Vacancy
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link News
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Convention
+        span.mobile-nav__close &times;
       nav.main-nav
         ul.main-nav__list.txt-body
           li.main-nav__item
@@ -18,5 +35,5 @@ header.main-header
               i(class="material-icons") expand_more
       .log-in
         include ../buttons/buttons.pug
-        +button({style:"border",text:"Log In",link:"login.html"})
+        +button({style:"border",text:"Log In",link:"login.html",adClass:" log-in__login"})
         +button({style:"fill",text:"Registration",link:"registration.html",adClass:" log-in__reg"})

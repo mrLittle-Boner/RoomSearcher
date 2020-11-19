@@ -5,3 +5,5 @@
 import './assets/styles/main.scss';
 import './rpie.js';
 import './pages/room-dets.js';
+import './pages/search-room.js';
+import './components/header/header.js';

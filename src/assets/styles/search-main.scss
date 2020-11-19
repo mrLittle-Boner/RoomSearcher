@@ -2,13 +2,13 @@
   display: flex;
 }
 
-.search-main__left{
+.search-main__left {
   max-width: 266px;
   margin-right: 5.2%;
 }
 
-.filter{
-
+.filter {
+  transition: all 0.3s linear;
 }
 
 .filter__dates {
@@ -25,7 +25,8 @@
     width: 100%;
     background: teal;
   }
-  &-price, &-text{
+  &-price,
+  &-text {
     font-family: $font-mt;
     color: $text-dark-50;
     font-size: 12px;
@@ -59,7 +60,6 @@
   }
 }
 
-
 .filter__guests,
 .filter__range,
 .filter__rules,
@@ -68,7 +68,8 @@
   margin-bottom: 30px;
 }
 
-.filter__dates, .filter__guests {
+.filter__dates,
+.filter__guests {
   .input-title {
     margin-bottom: 6px;
   }
@@ -128,5 +129,26 @@
     font-weight: 400;
     font-size: 14px;
     color: $text-dark-75;
+  }
+}
+
+.search-main__mobile-filter {
+  display: none;
+  position: fixed;
+  background: #ffffff;
+  padding: 5px;
+  left: -15px;
+  border-radius: 4px;
+  top: 20%;
+  z-index: 10;
+  font-size: 20px;
+  font-family: $font-qs;
+  transform: rotate(-90deg);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  &--open {
+    left: 240px;
   }
 }
