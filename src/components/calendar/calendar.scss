@@ -31,16 +31,67 @@
 
   &__date {
     width: calc(50% - 10px);
-  }
-
-  &__guests {
-    margin-bottom: 30px;
+    position: relative;
+    i {
+      position: absolute;
+      top: 28px;
+      right: 6px;
+    }
   }
 
   &__btn {
     display: flex;
     align-items: center;
   }
+  .guests {
+    margin-bottom: 30px;
+
+    &__title {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+//custom styles for air-datepiker
+// .datepicker {
+//   opacity: 1;
+//   left: 0;
+//   width: 320px;
+// }
+.datepicker--nav-title {
+  font-size: 19px;
+  font-weight: 700;
+  font-family: $font-qs;
+  color: $text-dark-100;
+  i {
+    color: inherit;
+  }
+}
+
+.datepicker--nav {
+  padding: 12px 10px;
+}
+.datepicker--content {
+  margin-top: 10px;
+  padding: 10px 20px 10px 20px;
+}
+.datepicker--nav-action path {
+  stroke: $color-main;
+}
+.datepicker--day-name {
+  color: $color-main;
+  font-family: $font-mt;
+  font-weight: 700;
+  font-size: 12px;
+}
+.datepicker--cell {
+  height: 38px;
+}
+
+.datepicker--cell-day {
+  font-family: $font-mt;
+  font-size: 12px;
+  color: $text-dark-50;
 }
 
 @media screen and (max-width: 768px) {

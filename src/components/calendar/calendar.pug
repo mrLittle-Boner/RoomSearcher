@@ -3,18 +3,15 @@
   .calendar__dates
     .calendar__date
       .calendar__subtitle.txt-h3 Arrival
-      .calendar__field
-        | DD.MM.YYYY
-        i(class='material-icons') expand_more
+      input(type='text',class='datepicker-here', placeholder='DD.MM.YYYY', readonly).calendar__field
+        //- | DD.MM.YYYY
+      i(class='material-icons') expand_more
     .calendar__date
       .calendar__subtitle.txt-h3 Departure
-      .calendar__field
-        | ДД.MM.YYYY
-        i(class='material-icons') expand_more
-  .calendar__guests
-    .calendar__subtitle.txt-h3 Guests
-    .calendar__field 
-      | How many guests 
+      input(type='text',class='datepicker-here', placeholder='DD.MM.YYYY', readonly).calendar__field
+        //- | ДД.MM.YYYY
       i(class='material-icons') expand_more
+  include ../guests/guests.pug
+
   include ../buttons/buttons.pug
   +button({style:"fill", text:"pick up a room", link:"./search-room.html",arrow: true})

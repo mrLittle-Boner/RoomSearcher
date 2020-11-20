@@ -5,10 +5,14 @@
 .search-main__left {
   max-width: 266px;
   margin-right: 5.2%;
-}
-
-.filter {
   transition: all 0.3s linear;
+
+  .guests {
+    margin-bottom: 30px;
+    &__title {
+      margin-bottom: 6px;
+    }
+  }
 }
 
 .filter__dates {
@@ -60,7 +64,6 @@
   }
 }
 
-.filter__guests,
 .filter__range,
 .filter__rules,
 .filter__acces,
@@ -68,8 +71,7 @@
   margin-bottom: 30px;
 }
 
-.filter__dates,
-.filter__guests {
+.filter__dates {
   .input-title {
     margin-bottom: 6px;
   }
