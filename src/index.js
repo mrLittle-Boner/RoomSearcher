@@ -1,9 +1,9 @@
-// import img1 from './assets/images/main-1.jpg';
-// import './components/calendar/calendar.js';
+import './rpie.js';
 import 'air-datepicker/dist/js/datepicker.min.js';
 import 'air-datepicker/dist/css/datepicker.min.css';
+import 'ion-rangeslider/js/ion.rangeSlider.min.js';
+import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './assets/styles/main.scss';
-import './rpie.js';
 import './pages/room-dets.js';
 import './pages/search-room.js';
 import './components/header/header.js';

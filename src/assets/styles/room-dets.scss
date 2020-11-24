@@ -40,8 +40,6 @@
 .room-dets {
   max-width: 280px;
   margin-right: 6.1%;
-  &-title {
-  }
 
   &__icon {
     display: flex;
@@ -298,6 +296,12 @@
     span {
       font-size: 12px;
       font-weight: 400;
+    }
+  }
+  .guests {
+    margin-bottom: 20px;
+    &__title {
+      margin-bottom: 5px;
     }
   }
 }

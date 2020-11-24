@@ -18,14 +18,20 @@ block body
         .search-main__left.filter
           .filter__dates
             .input-title Dates of stay
-            .input-field 19 feb - 23 aug
-              i(class="material-icons") expand_more
+            input(type='text',class='datepicker-here',data-multiple-dates="2", placeholder='19 feb - 23 aug', readonly).input-field
+            i(class="material-icons") expand_more
           include ../components/guests/guests.pug
           .filter__range
             .filter__range-titles
               .filter__range-name.txt-h3 Range price
               .filter__range-price 5 000Р - 10 000Р
-            .filter__range-trigger
+            input(type="text", class="js-range-slider", name="my_range", value="",
+              data-type="double",
+              data-min="1000",
+              data-step="1000",
+              data-max="20000",
+              data-from="5000",
+              data-to="10000").filter__range-trigger
             .filter__range-text Cost per day in the room
           .filter__rules
             .filter__rules-title.txt-h3 Hotel rules
@@ -57,7 +63,6 @@ block body
           .filter__more
             .input-title.filter__more-title Additional facilities
               i(class="material-icons") expand_more
-
             .filter__more-dropdown
               +checkBox({descr: 'Breakfast'}) 
               +checkBox({descr: 'Writing desk'}) 

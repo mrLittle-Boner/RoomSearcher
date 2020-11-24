@@ -1,18 +1,14 @@
 .bg-image-home {
-  background-image: url('../images/main-2.jpg');
+  background-image: url("../images/main-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-} 
+}
 
 .home-main {
   position: relative;
   height: 800px;
   padding-top: 70px;
-
-  &__calendar {
-
-  }
 
   &__text {
     max-width: 260px;

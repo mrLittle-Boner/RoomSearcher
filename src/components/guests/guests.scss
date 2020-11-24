@@ -33,14 +33,18 @@
       color: $text-dark-50;
       border: 1px solid $text-dark-25;
     }
+
+    &-minus {
+      color: $text-dark-50;
+      border: 1px solid $text-dark-25;
+    }
   }
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
-    &-title {
-    }
+
     &-controler {
       display: flex;
       align-items: center;

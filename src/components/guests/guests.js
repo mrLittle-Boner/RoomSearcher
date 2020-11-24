@@ -13,8 +13,9 @@ $(".guests__item-controler").on("click", function (event) {
   if (targetClass === "guests__dropdown-plus") {
     count.innerHTML = +count.innerHTML + 1;
   }
-
 });
+
+
 
 $(".guests__btn-done").on("click", function () {
   countGuests();

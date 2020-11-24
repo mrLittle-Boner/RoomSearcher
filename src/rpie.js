@@ -15,6 +15,7 @@ var pieChart = {
   }
 
   catch (err) {
-    console.log("Rpie is not here, combat him later")
+
   }
+
 })();

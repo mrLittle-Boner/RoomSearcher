@@ -118,22 +118,31 @@ block body
             .book__price
               | 9 900&#8381;
               span  per day
-          .book__dates
-            .book__dates-arrival
-              .book__dates-title Arrival
-              .book__dates-input 
-                | 19.08.2019
-                i(class="material-icons") expand_more
-            .book__dates-departure
-              .book__dates-title Departure
-              .book__dates-input 
-                | 23.08.2019
-                i(class="material-icons") expand_more
-          .book__guest
-            .book__guest-title Guests
-            .book__guest-input
-              | 3 guests 
-              i(class="material-icons") expand_more
+          .calendar__dates.book__dates
+            .calendar__date
+              .calendar__subtitle.txt-h3 Arrival
+              input(type='text',class='datepicker-here', placeholder='DD.MM.YYYY', readonly).calendar__field
+              i(class='material-icons') expand_more
+            .calendar__date
+              .calendar__subtitle.txt-h3 Departure
+              input(type='text',class='datepicker-here', placeholder='DD.MM.YYYY', readonly).calendar__field
+              i(class='material-icons') expand_more
+          //- .book__dates
+          //-   .book__dates-arrival
+          //-     .book__dates-title Arrival
+          //-     .book__dates-input 
+          //-       | 19.08.2019
+          //-       i(class="material-icons") expand_more
+          //-   .book__dates-departure
+          //-     .book__dates-title Departure
+          //-     .book__dates-input 
+          //-       | 23.08.2019
+          //-       i(class="material-icons") expand_more
+          include ../components/guests/guests.pug
+            //- .book__guest-title Guests
+            //- .book__guest-input
+            //-   | 3 guests 
+            //-   i(class="material-icons") expand_more
           ul.book__cost
             li.book__cost-item
               span 9 9900P x 4days

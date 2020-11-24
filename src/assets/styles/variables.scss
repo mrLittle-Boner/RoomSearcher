@@ -23,6 +23,10 @@ a {
   margin-left: auto;
   flex-basis: 32px;
 }
+.buttons,
+.inputs {
+  margin: 50px 0;
+}
 
 // Variables //
 $gradient-primary: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
